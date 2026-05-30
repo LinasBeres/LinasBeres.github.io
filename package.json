@@ -1,0 +1,22 @@
+{
+  "name": "my-website",
+  "version": "1.0.0",
+  "description": "Dev code for my website",
+  "scripts": {
+    "build:html": "pug pug/ --out .",
+    "build:css": "sass sass/styles.sass stylesheets/styles.css && sass sass/cv.sass stylesheets/cv.css",
+    "build": "npm run build:html && npm run build:css",
+    "watch:html": "pug pug/ --out . --watch",
+    "watch:css": "sass --watch sass/styles.sass:stylesheets/styles.css sass/cv.sass:stylesheets/cv.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LinasBeres/my-website.git"
+  },
+  "author": "Linas Beresna",
+  "license": "MIT",
+  "devDependencies": {
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "1.77.8"
+  }
+}

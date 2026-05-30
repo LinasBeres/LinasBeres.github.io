@@ -1,0 +1,13 @@
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+*.css
+
+*.html
+*.swp
+
+package-lock.json
+node_modules/
+stylesheets/
+
