@@ -1,0 +1,12 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="author" content="Linas Berensa"/><meta name="description" content="My home page about Linas - Me!"/><script>(function(){if(localStorage.getItem('site-theme')==='light')document.documentElement.classList.add('light-mode');})();
+</script></head><body><button class="theme-toggle" id="theme-toggle" type="button">Light Mode</button><script src="https://code.jquery.com/jquery-3.7.1.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script><script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js"></script><script>(function(){
+  var t=document.getElementById('theme-toggle');
+  if(!t)return;
+  var h=document.documentElement;
+  t.textContent=h.classList.contains('light-mode')?'Dark Mode':'Light Mode';
+  t.addEventListener('click',function(){
+    var l=h.classList.toggle('light-mode');
+    t.textContent=l?'Dark Mode':'Light Mode';
+    localStorage.setItem('site-theme',l?'light':'dark');
+  });
+})();</script></body></html>
