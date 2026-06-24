@@ -5,20 +5,21 @@ block body
     a.nav-home(href="../index.html")
       img.nav-face(src="../images/me.jpg")
     .nav-menus
-      .nav-dropdown.nav-socials
+      .nav-dropdown.nav-socials(tabindex="0")
         .nav-dropdown-title Socials
         .nav-dropdown-content
           a(href="https://github.com/LinasBeres") Github
           a(href="https://uk.linkedin.com/in/linas-beresna") LinkedIn
+          a(href="https://scholar.google.ca/citations?hl=en&user=1qZO4GgAAAAJ") Scholar
           a(href="../views/contact.html") Contact
-      .nav-dropdown.nav-resume
+      .nav-dropdown.nav-resume(tabindex="0")
         .nav-dropdown-title Resume
         .nav-dropdown-content
           a(href="../views/resume.html") Pretty
           a(href="../files/linas-beresna-cv.pdf") Simple
-      .nav-dropdown.nav-interests
-        .nav-dropdown-title Interests
-        .nav-dropdown-content
-          a(href="../views/graphics.html") Graphics!
-          a(href="../views/motorbiking.html") Motorbiking
+      //- .nav-dropdown.nav-interests(tabindex="0")
+        //- .nav-dropdown-title Interests
+        //- .nav-dropdown-content
+          //- a(href="../views/graphics.html") Graphics!
+          //- a(href="../views/motorbiking.html") Motorbiking
   block view-body

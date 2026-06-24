@@ -1,25 +1,8 @@
-// CV page stylesheet — light by default, dark via .cv-dark class on #cv-wrapper
+// CV page stylesheet — dark by default, light via html.light-mode (global toggle)
 
-//++++ Light theme (default)
+//++++ Dark theme (default)
 //+++++++++++++++++++++++++++
 .cv-wrapper
-  --cv-bg: #fdf6e3
-  --cv-text: #3c3836
-  --cv-text-muted: #665c54
-  --cv-accent: #076678
-  --cv-border: #d5c4a1
-  --cv-link: #076678
-  --cv-row-border: #e5d9b5
-
-  background-color: var(--cv-bg)
-  color: var(--cv-text)
-  transition: background-color 0.2s ease, color 0.2s ease
-  min-height: calc(100vh - 83px)
-  width: 100%
-
-//++++ Dark theme
-//++++++++++++++++
-.cv-wrapper.cv-dark
   --cv-bg: #282828
   --cv-text: #ebdbb2
   --cv-text-muted: #a89984
@@ -27,6 +10,23 @@
   --cv-border: #504945
   --cv-link: #83a598
   --cv-row-border: #3c3836
+
+  background-color: var(--cv-bg)
+  color: var(--cv-text)
+  transition: background-color 0.2s ease, color 0.2s ease
+  min-height: calc(100vh - 83px)
+  width: 100%
+
+//++++ Light theme
+//++++++++++++++++++
+html.light-mode .cv-wrapper
+  --cv-bg: #fdf6e3
+  --cv-text: #3c3836
+  --cv-text-muted: #665c54
+  --cv-accent: #076678
+  --cv-border: #d5c4a1
+  --cv-link: #076678
+  --cv-row-border: #e5d9b5
 
 //++++ Container
 //+++++++++++++++
@@ -192,6 +192,27 @@
 
 //++++ Print
 //+++++++++++
+@media (max-width: 600px)
+
+  .cv-container
+    padding: 24px 16px 40px
+
+  .cv-header
+    flex-direction: column
+    gap: 12px
+
+  .cv-entry-header
+    flex-direction: column
+    gap: 2px
+
+  .cv-entry-date
+    font-size: 0.8em
+
+  .cv-skills-table
+    th
+      width: 90px
+      padding-right: 12px
+
 @media print
   .site-nav
     display: none !important

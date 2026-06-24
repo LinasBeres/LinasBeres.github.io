@@ -61,7 +61,7 @@ html, body
   top: 14px
   right: 16px
   z-index: 1000
-  background: none
+  background-color: var(--bg)
   border: 1px solid var(--brbg)
   color: var(--fg)
   padding: 5px 12px
@@ -148,7 +148,7 @@ html, body
           color: var(--fg)
           text-decoration: none
 
-    &:hover .nav-dropdown-content
+    &:hover .nav-dropdown-content, &:focus-within .nav-dropdown-content
       max-height: 200px
       opacity: 1
 
@@ -242,7 +242,7 @@ html, body
 //+++++++++++++++++
 .publication
   display: flex
-  align-items: center
+  align-items: flex-start
   gap: 15px
   padding: 10px 0px
   border-bottom: 1px solid var(--brbg)
@@ -358,6 +358,7 @@ a:hover, a:focus
   margin-right: auto
   padding-right: 20px
   padding-left: 20px
+  padding-bottom: 40px
 
 .project-header
   margin-top: 20px
@@ -394,6 +395,11 @@ a:hover, a:focus
     margin-top: 10px
     line-height: 1.5
     font-style: italic
+    text-align: justify
+
+.project-holder
+  .content .block p
+    text-align: justify
 
 .project-resource-row
   display: flex
@@ -403,6 +409,7 @@ a:hover, a:focus
 
 .citation-section
   margin-top: 20px
+  margin-bottom: 40px
 
   .citation-label
     font-size: 2em
@@ -458,3 +465,63 @@ a:hover, a:focus
 
 .email
   text-align: center
+
+//++++ Responsive
+//+++++++++++++++++
+
+@media (max-width: 600px)
+
+  .site-nav
+    padding: 10px 12px
+    gap: 10px
+
+  .nav-dropdown
+    width: 85px
+
+  .intro-row
+    flex-direction: column
+    align-items: center
+
+    .inline
+      justify-content: center
+      flex-wrap: wrap
+
+  .holder, .publications-holder
+    padding-right: 12px
+    padding-left: 12px
+
+  .content .block
+    margin-left: 0
+    margin-right: 0
+
+  .publication
+    flex-direction: column
+
+    .pub-thumbnail
+      width: 100%
+      height: 160px
+
+    .pub-buttons
+      flex-direction: row
+      flex-wrap: wrap
+
+  .project-header
+    .project-title
+      font-size: 1.4em
+
+  .project-teaser
+    margin-left: 0
+    margin-right: 0
+
+  .project-resource-row
+    margin-left: 0
+    margin-right: 0
+
+  .citation-section
+    .citation-text-box
+      margin-left: 0
+      margin-right: 0
+
+    .bibtex-box
+      margin-left: 0
+      margin-right: 0
