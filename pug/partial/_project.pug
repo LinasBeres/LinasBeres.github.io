@@ -30,11 +30,13 @@ block view-body
         +content("Figures")
           block figures
 
-      .citation-section#citation
-        .citation-label Citation
-        .citation-text-box
-          block citation-text
-        .citation-bibtex-label BibTeX
-        .bibtex-box
-          pre
-            block citation-bibtex
+      block citation-section
+        .citation-section#citation
+          .citation-label Citation
+          .citation-text-box
+            block citation-text
+          block bibtex-section
+            .citation-bibtex-label BibTeX
+            .bibtex-box
+              pre
+                block citation-bibtex
