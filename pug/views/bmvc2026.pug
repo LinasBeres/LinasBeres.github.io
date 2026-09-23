@@ -1,0 +1,25 @@
+extends ../partial/_project
+
+append meta
+  title Scene Parameter Saliency via Differentiable Light Transport | Linas Beresna
+
+block project-header
+  h1.project-title Scene Parameter Saliency via Differentiable Light Transport
+  p.pub-authors
+    strong Linas Beresna
+    | , Eugene Fiume
+  p.pub-venue British Machine Vision Conference (BMVC), 2026
+
+block teaser
+  img(src='../images/papers/bmvc2026/teaser.jpg' alt='Scene Parameter Saliency teaser image')
+  p.teaser-caption Expanding the diagnostic toolkit for architectural lighting. While conventional analysis provides (b) glare source identification and (c) luminance maps to evaluate discomfort glare, it leaves the designer to guess the root physical causes. By differentiating the psychovisual unified glare rating through the light transport simulation, we obtain (d) a metric saliency map. This highlights the specific scene materials and geometry driving the metric, explicitly guiding design decisions.
+
+block abstract
+  p Gradient-based saliency methods reveal which input features most influence a neural network's output, and are a standard tool for model interpretability. We observe that differentiable renderers, which are conventionally used for parameter optimisation, produce an analogous form of saliency: given any scalar metric evaluated on a rendered image, a single reverse-mode differentiation pass yields per-parameter gradients that identify which scene elements most influence the metric. We call these gradient fields metric saliency maps. Unlike neural saliency, which propagates attribution through learned weights, metric saliency propagates through the image formation process itself, including multi-bounce light transport, capturing parameter dependencies that are semi-opaque to manual inspection. We compute metric saliency maps for qualitatively different objectives: psychovisual glare indices, mean scene luminance, and neural perceptual scores. The saliency rankings differ substantially across metrics for the same scene, with parameters that dominate one objective being negligible for another. The saliency map is specific to the metric, not an intrinsic property of the scene. Our results suggest that differentiable renderers produce derivative images that are as informative for scene understanding as the primal images they were designed to generate.
+
+block resources
+  a.pub-btn(href='../files/papers/BMVC-Saliency.pdf') Paper (16 MB)
+
+block figures-section
+
+block citation-section
