@@ -1,0 +1,25 @@
+extends ../partial/_project
+
+append meta
+  title Sensitivity as an Arbitrary Output Variable for Differentiable Rendering | Linas Beresna
+
+block project-header
+  h1.project-title Sensitivity as an Arbitrary Output Variable for Differentiable Rendering
+  p.pub-authors
+    strong Linas Beresna
+    | , Eugene Fiume
+  p.pub-venue SIGGRAPH Asia Technical Communications, 2026
+
+block teaser
+  img(src='../images/papers/sigasia2026/teaser.jpg' alt='Sensitivity AOV teaser image')
+  p.teaser-caption Sensitivity AOVs. Beside the primal outputs (left), one reverse-mode pass yields the derivative of a scalar objective with respect to every scene parameter (right). One buffer supports several views: a sunburst ranking the most influential parameters, a projection onto primary visibility locating them in the image, and per-type channels, each signed, blue where increasing the parameter lowers the objective and red where it raises it.
+
+block abstract
+  p Differentiable renderers expose the derivative of any scalar objective with respect to every scene parameter, yet unlike the primal image, which decades of arbitrary output variables (AOVs) have taught us to decompose, inspect, and composite, these derivatives have no established representation for human inspection. We introduce the #[em sensitivity AOV], a render output carrying the sensitivity of an objective to the scene parameters that influence it. A single reverse-mode pass populates a #[em sensitivity buffer] over the scene's parameter hierarchy, from which many views are read rather than re-differentiated, in direct analogy to deferred shading: image-space sensitivity at object and parameter-type granularity, projections onto a freely navigable scene from any inspection viewpoint, and, for spatially varying parameters, per-texel fields carried to the surface through texture coordinates. We separate the fixed camera that defines the objective from the free camera used to inspect the result, and position reverse-mode attribution against its forward-mode dual. Our aim is not a single algorithm but a scaffolding that establishes derivative outputs as first-class render products alongside the primal image.
+
+block resources
+  a.pub-btn(href='../files/papers/SIGASIA-Sensitivity.pdf') Paper (4.9 MB)
+
+block figures-section
+
+block citation-section
